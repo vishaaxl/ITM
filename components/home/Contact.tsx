@@ -4,9 +4,9 @@ import styled, { ThemeContext } from "styled-components";
 
 // local
 import Input from "../Input";
-import { Background } from "./recycle/Admission";
 import { Button } from "../global/Buttons";
 import { AccentLine } from "../global/Accents";
+import { Background } from "../global/Backgrounds";
 
 interface Props {}
 

@@ -159,7 +159,7 @@ body::-webkit-scrollbar {
 }
 /* Optional: show position indicator in red */
 body::-webkit-scrollbar-thumb {
-  background: #ffc300;
+  background: #c21717;
 }
 
 .container {
