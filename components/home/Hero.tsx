@@ -48,7 +48,7 @@ const HeroWrapper = styled.header`
       padding-top: 1rem;
       cursor: pointer;
       text-align: center;
-      color: ${({ theme }) => theme.accent.secondary};
+      color: ${({ theme }) => theme.accent.tertiary};
       text-decoration: underline;
     }
   }
@@ -60,9 +60,8 @@ const HeroWrapper = styled.header`
     background: rgba(0, 0, 0, 0.5);
     background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.01) 0%,
-      rgba(0, 0, 0, 0.4) 95%,
-      rgba(0, 0, 0, 0.4) 100%
+      rgba(25, 255, 255, 0.01) 0%,
+      rgba(0, 128, 255, 0.2) 100%
     );
   }
 `;

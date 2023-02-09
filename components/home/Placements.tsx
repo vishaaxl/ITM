@@ -19,8 +19,7 @@ const Wrapper = styled.div`
   .heading {
     margin-bottom: 1rem;
     font-size: 2rem;
-    font-weight: 700;
-    color: ${({ theme }) => theme.accent.primary};
+    font-weight: 800;
 
     .accent {
       color: ${({ theme }) => theme.accent.secondary};

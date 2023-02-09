@@ -3,8 +3,8 @@ export const defaultTheme = {
   secondary: "#fdfdfd",
   accent: {
     primary: "#21397D",
-    secondary: "#ffc300",
-    tertiary: "#C21717",
+    secondary: "#C21717",
+    tertiary: "#ffc300",
   },
   light: "#696969",
   lightbg: "#E9E9E9",

@@ -1,18 +1,12 @@
 import Head from "next/head";
 
 // local
-import Apply from "@/components/home/Apply";
-import FAQs from "@/components/home/FAQs";
-import Footer from "@/components/home/Footer";
 import Contact from "@/components/home/Contact";
-import Director from "@/components/home/Director";
-import Vision from "@/components/home/Vision";
 import Placements from "@/components/home/Placements";
-import Achievements from "@/components/home/Achievements";
 import Hero from "@/components/home/Hero";
 import Events from "@/components/home/Events";
 import Notices from "@/components/home/Notices";
-import About from "@/components/home/About";
+import AboutAndDirector from "@/components/home/About-director";
 
 export default function Home() {
   return (
@@ -25,16 +19,10 @@ export default function Home() {
       </Head>
       <Hero />
       <Events />
-      <Director />
+      <AboutAndDirector />
       <Notices />
-      {/* <Admission /> */}
-      <Vision />
-      <Placements />
-      <Achievements />
-      <About />
-      <FAQs />
       <Contact />
-      <Apply />
+      <Placements />
     </>
   );
 }

@@ -1,10 +1,11 @@
 import { Form, Formik } from "formik";
 import styled from "styled-components";
+import { AccentLine } from "../global/Accents";
+import { Button } from "../global/Buttons";
 
 // local
 import Input from "../Input";
-import { AccentLine } from "@/utils/global";
-import { Background, Button } from "./Admission";
+import { Background } from "./recycle/Admission";
 
 interface Props {}
 
@@ -13,6 +14,10 @@ const ContactWrapper = styled.section`
 
   @media (min-width: 768px) {
     padding: 4rem 0;
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+    }
   }
 
   .column-one {
@@ -52,7 +57,7 @@ const Contact: React.FC<Props> = () => {
               Get Your <br />
               Query Answered
             </h2>
-            <AccentLine />
+            <AccentLine color="yellow" />
             <span className="fade">
               Submit your query and we will contact you soon.
             </span>
@@ -76,7 +81,7 @@ const Contact: React.FC<Props> = () => {
                 rows={3}
               />
 
-              <Button>Submit Query</Button>
+              <Button color="yellow">Submit Query</Button>
             </Form>
           </Formik>
         </div>

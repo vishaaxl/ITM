@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
-export const AccentLine = styled.span`
+interface Props {
+  color: string;
+}
+
+export const AccentLine = styled.span<Props>`
   border-radius: 2px;
   position: relative;
   display: block;
   margin: 2rem 0;
   height: 3px;
   width: 20%;
-  background: ${({ theme }) => theme.accent.secondary};
+  background: ${({ theme, color }) =>
+    color == "red" ? theme.accent.secondary : theme.accent.tertiary};
 
   &::before {
     content: "";
@@ -19,7 +24,8 @@ export const AccentLine = styled.span`
     transform: translate(-50%, -50%);
     border-radius: 5px;
 
-    background: ${({ theme }) => theme.accent.secondary};
+    background: ${({ theme, color }) =>
+      color == "red" ? theme.accent.secondary : theme.accent.tertiary};
   }
 `;
 

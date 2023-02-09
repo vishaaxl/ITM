@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 
 // local
-import { AccentLine } from "@/utils/global";
+import { AccentLine } from "@/components/global/Accents";
 interface Props {}
 
 const Wrapper = styled.div`
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
       font-weight: 800;
 
       .accent {
-        color: ${({ theme }) => theme.accent.primary};
+        color: ${({ theme }) => theme.accent.secondary};
       }
     }
   }
@@ -66,7 +66,7 @@ const ColumnWrapper = styled.div`
   display: grid;
   gap: 2rem;
 
-  @media (min-width: 900px) {
+  @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
 `;
@@ -77,9 +77,9 @@ const Notices: React.FC<Props> = () => {
       <Wrapper>
         <div className="heading">
           <h2>
-            <span className="accent">ADMISSONS</span> ZONE
+            ADMISSONS <span className="accent">ZONE</span>
           </h2>
-          <AccentLine />
+          <AccentLine color="red" />
         </div>
 
         <ColumnWrapper>
