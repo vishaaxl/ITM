@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // local
 import PageHeading from "@/components/global/PageHeading";
-import { AccentLineLong } from "@/utils/global";
+import { AccentLineLong } from "@/components/global/Accents";
 
 const Wrapper = styled.section`
   padding-bottom: 2rem;
@@ -23,11 +23,11 @@ const Wrapper = styled.section`
     font-weight: 800;
 
     @media (min-width: 425px) {
-      font-size: 3.25rem;
+      font-size: 3rem;
     }
 
     @media (min-width: 767px) {
-      font-size: 4rem;
+      font-size: 3.25rem;
     }
 
     .accent {

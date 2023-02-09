@@ -32,7 +32,9 @@ const Layout: React.FC<Props> = ({ children }) => {
         <MiddleNavElement toggleMenu={toggleMenu} />
         <BottomNavElement />
         <AnimatePresence mode="wait">
-          {isMobileMenuOpen && <MobileNavigationElement />}
+          {isMobileMenuOpen && (
+            <MobileNavigationElement toggleMenu={toggleMenu} />
+          )}
         </AnimatePresence>
       </Navigation>
       {children}

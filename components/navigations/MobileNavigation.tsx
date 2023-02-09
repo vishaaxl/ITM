@@ -1,6 +1,6 @@
 import { HiOutlineChevronDown } from "react-icons/hi";
 import styled from "styled-components";
-import { useState } from "react";
+import { FC, useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
@@ -59,7 +59,11 @@ const Link = styled.div`
   }
 `;
 
-const MobileNavigationElement = () => {
+interface Props {
+  toggleMenu: () => void;
+}
+
+const MobileNavigationElement: FC<Props> = ({ toggleMenu }) => {
   const router = useRouter();
   const [active, setActive] = useState(-1);
   return (
@@ -99,7 +103,10 @@ const MobileNavigationElement = () => {
                   {item.links?.map((link) => (
                     <li
                       key={link.id}
-                      onClick={() => router.push(`/${link.href}`)}
+                      onClick={() => {
+                        router.push(link.href as string);
+                        toggleMenu();
+                      }}
                     >
                       {link.title}
                     </li>
@@ -109,7 +116,10 @@ const MobileNavigationElement = () => {
             ) : (
               <Link
                 key={item.id}
-                onClick={() => router.push(item.href as string)}
+                onClick={() => {
+                  router.push(item.href as string);
+                  toggleMenu();
+                }}
               >
                 <span>{item.title}</span>
               </Link>

@@ -1,5 +1,11 @@
 export const navItems = [
   {
+    id: 100,
+    title: "Home",
+    isDropDown: false,
+    href: "/",
+  },
+  {
     id: 0,
     title: "The Institute",
     isDropDown: true,
