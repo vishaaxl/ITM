@@ -1,11 +1,12 @@
 import { Form, Formik } from "formik";
-import styled from "styled-components";
-import { AccentLine } from "../global/Accents";
-import { Button } from "../global/Buttons";
+import { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 
 // local
 import Input from "../Input";
 import { Background } from "./recycle/Admission";
+import { Button } from "../global/Buttons";
+import { AccentLine } from "../global/Accents";
 
 interface Props {}
 
@@ -48,6 +49,7 @@ const TwoColumn = styled.div`
 `;
 
 const Contact: React.FC<Props> = () => {
+  const theme = useContext(ThemeContext);
   return (
     <Background dark>
       <ContactWrapper>
@@ -57,7 +59,7 @@ const Contact: React.FC<Props> = () => {
               Get Your <br />
               Query Answered
             </h2>
-            <AccentLine color="yellow" />
+            <AccentLine color={theme.accent.tertiary} />
             <span className="fade">
               Submit your query and we will contact you soon.
             </span>
@@ -81,7 +83,7 @@ const Contact: React.FC<Props> = () => {
                 rows={3}
               />
 
-              <Button color="yellow">Submit Query</Button>
+              <Button color={theme.accent.tertiary}>Submit Query</Button>
             </Form>
           </Formik>
         </div>

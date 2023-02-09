@@ -61,7 +61,7 @@ const HeroWrapper = styled.header`
     background: linear-gradient(
       0deg,
       rgba(25, 255, 255, 0.01) 0%,
-      rgba(0, 128, 255, 0.2) 100%
+      rgba(3, 9, 66, 0.5) 100%
     );
   }
 `;

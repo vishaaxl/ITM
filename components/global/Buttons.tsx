@@ -7,8 +7,7 @@ interface ButtonProps {
 }
 
 export const Button = styled.div<ButtonProps>`
-  background: ${({ theme, color }) =>
-    color == "red" ? theme.accent.secondary : theme.accent.tertiary};
+  background: ${({ color }) => color};
   color: ${({ theme }) => theme.secondary};
   /* box-shadow: ${({ theme }) => theme.shadowPrimary}; */
   font-weight: 600;

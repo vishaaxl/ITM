@@ -69,7 +69,7 @@ const BottomNav = styled.div`
     }
 
     .dropdown-content {
-      border-radius: 3px;
+      border-radius: 2px;
       display: none;
       width: fit-content;
       position: absolute;

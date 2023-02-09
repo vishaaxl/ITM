@@ -11,8 +11,7 @@ export const AccentLine = styled.span<Props>`
   margin: 2rem 0;
   height: 3px;
   width: 20%;
-  background: ${({ theme, color }) =>
-    color == "red" ? theme.accent.secondary : theme.accent.tertiary};
+  background: ${({ color }) => color};
 
   &::before {
     content: "";
@@ -24,8 +23,7 @@ export const AccentLine = styled.span<Props>`
     transform: translate(-50%, -50%);
     border-radius: 5px;
 
-    background: ${({ theme, color }) =>
-      color == "red" ? theme.accent.secondary : theme.accent.tertiary};
+    background: ${({ color }) => color};
   }
 `;
 

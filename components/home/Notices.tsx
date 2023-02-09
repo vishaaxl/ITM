@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import { useContext } from "react";
+import styled, { ThemeConsumer, ThemeContext } from "styled-components";
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 
 // local
@@ -72,6 +73,7 @@ const ColumnWrapper = styled.div`
 `;
 
 const Notices: React.FC<Props> = () => {
+  const theme = useContext(ThemeContext);
   return (
     <div className="container">
       <Wrapper>
@@ -79,7 +81,7 @@ const Notices: React.FC<Props> = () => {
           <h2>
             ADMISSONS <span className="accent">ZONE</span>
           </h2>
-          <AccentLine color="red" />
+          <AccentLine color={theme.accent.secondary} />
         </div>
 
         <ColumnWrapper>

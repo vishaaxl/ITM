@@ -1,9 +1,10 @@
 import Image from "next/image";
-import styled from "styled-components";
-import { AccentLineLong } from "../global/Accents";
-import { Button, ButtonOutline } from "../global/Buttons";
+import styled, { ThemeContext } from "styled-components";
+import { useContext } from "react";
 
 // local
+import { AccentLineLong } from "../global/Accents";
+import { Button, ButtonOutline } from "../global/Buttons";
 
 interface Props {}
 
@@ -80,6 +81,7 @@ const ColumnHeading = styled.div`
 `;
 
 const AboutAndDirector: React.FC<Props> = () => {
+  const theme = useContext(ThemeContext);
   return (
     <Wrapper>
       <div className="container">
@@ -99,7 +101,7 @@ const AboutAndDirector: React.FC<Props> = () => {
               </p>
               <div className="buttons">
                 <ButtonOutline>Read More</ButtonOutline>
-                <Button color="red" compact>
+                <Button color={theme.accent.secondary} compact>
                   NewsLetter
                 </Button>
               </div>
