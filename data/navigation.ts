@@ -142,12 +142,12 @@ export const navItems = [
       },
     ],
   },
-  {
-    id: 3,
-    title: "Placement",
-    isDropDown: false,
-    href: "placement",
-  },
+  // {
+  //   id: 3,
+  //   title: "Placement",
+  //   isDropDown: false,
+  //   href: "placement",
+  // },
   {
     id: 4,
     title: "News and Events",
@@ -251,11 +251,5 @@ export const navItems = [
     title: "Innovation Cell",
     isDropDown: false,
     href: "innovation-cell",
-  },
-  {
-    id: 8,
-    title: "Admissions",
-    isDropDown: false,
-    href: "admissions",
   },
 ];

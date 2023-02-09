@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Marquee from "./Marquee";
 
 interface Props {}
 
@@ -11,7 +12,7 @@ const Wrapper = styled.section`
     position: relative;
     bottom: 7rem;
     z-index: 2;
-    box-shadow: ${({ theme }) => theme.shadowPrimary};
+    /* box-shadow: ${({ theme }) => theme.shadowPrimary}; */
   }
 
   .heading {
@@ -89,72 +90,74 @@ const ListItem = styled.div`
 
 const Events: React.FC<Props> = () => {
   return (
-    <div className="container-fluid">
-      <Wrapper>
-        <div className="heading">
-          <span>E</span>
-          <span>V</span>
-          <span>E</span>
-          <span>N</span>
-          <span>T</span>
-          <span>S</span>
-        </div>
-        <div className="main">
-          <ListItem>
-            <div className="column-one">
-              <span>27</span>
-              <span>Feb</span>
-            </div>
-            <div className="column-two">
-              <span>
-                Police Paathshala Organized at the Campus by our Our
-                Hon&rsquo;ble Chief guest Mr. Vipin Tada, SSP, Gorakhpur.
-              </span>
-              <span className="faded">27 Feb 2021 at 7:00 am</span>
-            </div>
-          </ListItem>
-          <ListItem>
-            <div className="column-one">
-              <span>27</span>
-              <span>Feb</span>
-            </div>
-            <div className="column-two">
-              <span>
-                Police Paathshala Organized at the Campus by our Our
-                Hon&rsquo;ble Chief guest Mr. Vipin Tada, SSP, Gorakhpur.
-              </span>
-              <span className="faded">27 Feb 2021 at 7:00 am</span>
-            </div>
-          </ListItem>
-          <ListItem>
-            <div className="column-one">
-              <span>27</span>
-              <span>Feb</span>
-            </div>
-            <div className="column-two">
-              <span>
-                Police Paathshala Organized at the Campus by our Our
-                Hon&rsquo;ble Chief guest Mr. Vipin Tada, SSP, Gorakhpur.
-              </span>
-              <span className="faded">27 Feb 2021 at 7:00 am</span>
-            </div>
-          </ListItem>
-          <ListItem>
-            <div className="column-one">
-              <span>27</span>
-              <span>Feb</span>
-            </div>
-            <div className="column-two">
-              <span>
-                Police Paathshala Organized at the Campus by our Our
-                Hon&rsquo;ble Chief guest Mr. Vipin Tada, SSP, Gorakhpur.
-              </span>
-              <span className="faded">27 Feb 2021 at 7:00 am</span>
-            </div>
-          </ListItem>
-        </div>
-      </Wrapper>
-    </div>
+    <>
+      <div className="container-fluid">
+        <Wrapper>
+          <div className="heading">
+            <span>E</span>
+            <span>V</span>
+            <span>E</span>
+            <span>N</span>
+            <span>T</span>
+            <span>S</span>
+          </div>
+          <div className="main">
+            <ListItem>
+              <div className="column-one">
+                <span>27</span>
+                <span>Feb</span>
+              </div>
+              <div className="column-two">
+                <span>
+                  Police Paathshala Organized at the Campus by our Our
+                  Hon&rsquo;ble Chief guest Mr. Vipin Tada, SSP, Gorakhpur.
+                </span>
+                <span className="faded">27 Feb 2021 at 7:00 am</span>
+              </div>
+            </ListItem>
+            <ListItem>
+              <div className="column-one">
+                <span>27</span>
+                <span>Feb</span>
+              </div>
+              <div className="column-two">
+                <span>
+                  Police Paathshala Organized at the Campus by our Our
+                  Hon&rsquo;ble Chief guest Mr. Vipin Tada, SSP, Gorakhpur.
+                </span>
+                <span className="faded">27 Feb 2021 at 7:00 am</span>
+              </div>
+            </ListItem>
+            <ListItem>
+              <div className="column-one">
+                <span>27</span>
+                <span>Feb</span>
+              </div>
+              <div className="column-two">
+                <span>
+                  Police Paathshala Organized at the Campus by our Our
+                  Hon&rsquo;ble Chief guest Mr. Vipin Tada, SSP, Gorakhpur.
+                </span>
+                <span className="faded">27 Feb 2021 at 7:00 am</span>
+              </div>
+            </ListItem>
+            <ListItem>
+              <div className="column-one">
+                <span>27</span>
+                <span>Feb</span>
+              </div>
+              <div className="column-two">
+                <span>
+                  Police Paathshala Organized at the Campus by our Our
+                  Hon&rsquo;ble Chief guest Mr. Vipin Tada, SSP, Gorakhpur.
+                </span>
+                <span className="faded">27 Feb 2021 at 7:00 am</span>
+              </div>
+            </ListItem>
+          </div>
+        </Wrapper>
+      </div>
+    </>
   );
 };
 

@@ -1,9 +1,11 @@
-import styled from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import { useContext } from "react";
 
 // local
 import { navItems } from "@/data/navigation";
 import { useRouter } from "next/router";
+import { Button } from "../global/Buttons";
 
 export const Link = styled.div`
   display: flex;
@@ -101,6 +103,7 @@ const BottomNav = styled.div`
 
 const BottomNavElement = () => {
   const router = useRouter();
+  const theme = useContext(ThemeContext);
   return (
     <BottomNav>
       <div className="container">
@@ -132,6 +135,9 @@ const BottomNavElement = () => {
               </Link>
             )
           )}
+          <Button color={theme.accent.secondary} compact>
+            Apply now
+          </Button>
         </ul>
       </div>
     </BottomNav>
