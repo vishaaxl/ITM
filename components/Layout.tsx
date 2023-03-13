@@ -8,6 +8,7 @@ import MiddleNavElement from "./navigations/MiddleNavigation";
 import MobileNavigationElement from "./navigations/MobileNavigation";
 import TopNavElement from "./navigations/TopNavigation";
 import Footer from "./home/Footer";
+import Marquee from "./home/Marquee";
 
 interface Props {
   children: ReactNode;
@@ -29,6 +30,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     <>
       <Navigation>
         <TopNavElement />
+        <Marquee />
         <MiddleNavElement toggleMenu={toggleMenu} />
         <BottomNavElement />
         <AnimatePresence mode="wait">

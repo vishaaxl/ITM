@@ -61,8 +61,8 @@ const ColumnWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media (min-width: 767px) {
-    grid-template-columns: 1fr 1fr 1fr;
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;
 
@@ -171,6 +171,26 @@ const Footer: React.FC<Props> = () => {
             <Line>
               <HiArrowUpRight className="icon" />
               <span>Youtube</span>
+            </Line>
+          </div>
+          <div className="row">
+            <span className="row-heading">Explore</span>
+            <Line>
+              <HiArrowUpRight className="icon" />
+              <span>Rules</span>
+            </Line>
+            <Line>
+              <HiArrowUpRight className="icon" />
+              <span>Campus Life</span>
+            </Line>
+
+            <Line>
+              <HiArrowUpRight className="icon" />
+              <span>Educational Programmes</span>
+            </Line>
+            <Line>
+              <HiArrowUpRight className="icon" />
+              <span>Institute Newsletter</span>
             </Line>
           </div>
         </ColumnWrapper>

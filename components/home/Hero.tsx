@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+
+import Image from "next/image";
 
 interface Props {}
 
@@ -6,9 +10,6 @@ const HeroWrapper = styled.header`
   position: relative;
   width: 100%;
   height: 80vh;
-  background-image: url("/images/banner.jpg");
-  background-size: cover;
-  position: relative;
 
   @media (min-width: 767px) {
     height: 50vh;
@@ -16,41 +17,6 @@ const HeroWrapper = styled.header`
 
   @media (min-width: 1024px) {
     height: 100vh;
-  }
-
-  .banner-heading {
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-
-    h1 {
-      font-size: 1.85rem;
-      text-align: center;
-      font-weight: 800;
-      color: ${({ theme }) => theme.secondary};
-      text-shadow: ${({ theme }) => theme.shadowPrimary};
-
-      @media (min-width: 425px) {
-        font-size: 2.5rem;
-      }
-
-      @media (min-width: 900px) {
-        font-size: 3rem;
-      }
-    }
-
-    display: flex;
-    flex-direction: column;
-
-    span {
-      padding-top: 1rem;
-      cursor: pointer;
-      text-align: center;
-      color: ${({ theme }) => theme.accent.tertiary};
-      text-decoration: underline;
-    }
   }
 
   .film {
@@ -64,17 +30,67 @@ const HeroWrapper = styled.header`
       rgba(3, 9, 66, 0.5) 100%
     );
   }
+
+  .embla {
+    overflow: hidden;
+    height: 100%;
+
+    .embla__container {
+      display: flex;
+      height: 100%;
+
+      .embla__slide {
+        flex: 0 0 100%;
+
+        .sliding-image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 `;
 
 const Hero: React.FC<Props> = () => {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
   return (
     <>
       <HeroWrapper>
         <div className="film"></div>
-
-        <div className="banner-heading container">
-          <h1>Welcome to INSTITUTE OF TECHNOLOGY AND MANAGEMENT</h1>
-          <span>Know more</span>
+        <div className="embla" ref={emblaRef}>
+          <div className="embla__container">
+            <div className="embla__slide">
+              <Image
+                unoptimized
+                src="/images/banner.jpg"
+                height={200}
+                width={200}
+                alt=""
+                className="sliding-image"
+              />
+            </div>
+            <div className="embla__slide">
+              <Image
+                unoptimized
+                src="/images/achivement_bg.jpg"
+                height={200}
+                width={200}
+                alt=""
+                className="sliding-image"
+              />
+            </div>
+            <div className="embla__slide">
+              <Image
+                unoptimized
+                src="/images/banner.jpg"
+                height={200}
+                width={200}
+                alt=""
+                className="sliding-image"
+              />
+            </div>
+          </div>
         </div>
       </HeroWrapper>
     </>

@@ -17,6 +17,7 @@ export const Link = styled.div`
 
   &:hover {
     color: ${({ theme }) => theme.accent.secondary};
+    font-weight: 700;
   }
 `;
 

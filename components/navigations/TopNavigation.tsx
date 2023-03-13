@@ -1,5 +1,11 @@
 import styled from "styled-components";
 import { HiMail, HiPhone } from "react-icons/hi";
+import {
+  AiFillFacebook,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 
 const TopNav = styled.nav`
   position: relative;
@@ -34,6 +40,18 @@ const TopNav = styled.nav`
       display: block;
     }
   }
+
+  .section-three {
+    display: none;
+
+    @media (min-width: 600px) {
+      display: block;
+    }
+
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
 `;
 
 const Line = styled.div`
@@ -57,8 +75,8 @@ const TopNavElement = () => {
           <ul className="links">
             <li className="link">Student Life</li>
             <li className="link">Alumni</li>
-            <li className="link">Complaints</li>
             <li className="link">Payment</li>
+            <Socials />
           </ul>
         </div>
         <div className="section-two">
@@ -71,8 +89,33 @@ const TopNavElement = () => {
             <span>+91-8081209500</span>
           </Line>
         </div>
+        <div className="section-three">
+          {" "}
+          <Socials />{" "}
+        </div>
       </div>
     </TopNav>
+  );
+};
+
+const IconsContainer = styled.div`
+  display: flex;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+
+  & > * {
+    cursor: pointer;
+  }
+`;
+
+const Socials = () => {
+  return (
+    <IconsContainer>
+      <AiOutlineTwitter />
+      <AiFillFacebook />
+      <AiFillLinkedin />
+      <AiFillInstagram />
+    </IconsContainer>
   );
 };
 
